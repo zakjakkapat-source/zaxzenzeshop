@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="th">
 <head>
@@ -7,72 +6,255 @@
 <title>ZaxZenzeShop</title>
 
 <style>
-body{
-background:#0f0f1a;
-color:white;
-font-family:Arial,sans-serif;
+*{
 margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif;
 }
 
-header{
-background:#181828;
-padding:20px;
-text-align:center;
-font-size:28px;
+body{
+background:#090914;
+color:white;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 40px;
+background:#111122;
+position:sticky;
+top:0;
+z-index:100;
+}
+
+.logo{
+font-size:30px;
 font-weight:bold;
-color:#9b5cff;
+color:#a855f7;
+}
+
+.menu{
+display:flex;
+gap:25px;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+}
+
+.btn{
+background:#9333ea;
+padding:10px 20px;
+border-radius:10px;
+text-decoration:none;
+color:white;
+font-weight:bold;
+}
+
+.hero{
+text-align:center;
+padding:70px 20px;
+}
+
+.hero h1{
+font-size:50px;
+margin-bottom:15px;
+}
+
+.hero p{
+color:#ccc;
+margin-bottom:25px;
+}
+
+.discord{
+background:#5865F2;
 }
 
 .products{
+padding:30px;
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-padding:20px;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
 }
 
 .card{
-background:#1b1b2f;
+background:#151528;
+border:1px solid #26263d;
 border-radius:15px;
+overflow:hidden;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.info{
 padding:15px;
 }
 
-button{
+.price{
+font-size:24px;
+font-weight:bold;
+color:#a855f7;
+margin:10px 0;
+}
+
+.buy{
 width:100%;
-padding:10px;
 border:none;
-border-radius:10px;
-background:#9b5cff;
+padding:12px;
+background:#9333ea;
 color:white;
+font-weight:bold;
+border-radius:10px;
 cursor:pointer;
 }
+
+footer{
+margin-top:50px;
+padding:30px;
+text-align:center;
+background:#111122;
+}
+
+.auth{
+display:flex;
+gap:10px;
+}
+
+.login{
+background:#222;
+padding:10px 15px;
+border-radius:10px;
+}
+
+.register{
+background:#9333ea;
+padding:10px 15px;
+border-radius:10px;
+}
+
+section{
+scroll-margin-top:90px;
+}
 </style>
+
 </head>
 
 <body>
 
-<header>ZaxZenzeShop</header>
+<nav>
+<div class="logo">ZaxZenzeShop</div>
+
+<div class="menu">
+<a href="#home">หน้าแรก</a>
+<a href="#shop">ร้านค้า</a>
+<a href="#contact">ติดต่อ</a>
+</div>
+
+<div class="auth">
+<div class="login">เข้าสู่ระบบ</div>
+<div class="register">สมัครสมาชิก</div>
+</div>
+</nav>
+
+<section class="hero" id="home">
+<h1>ร้านขาย ID AOT Revolution</h1>
+<p>ไอดีคุณภาพ ราคาถูก ส่งไว</p>
+
+<a class="btn discord" href="#">
+Discord</a>
+</section>
+
+<section id="shop">
 
 <div class="products">
 
 <div class="card">
+<img src="https://picsum.photos/400/250?1">
+<div class="info">
 <h2>ID AOT 1M+</h2>
-<p>55 บาท</p>
-<button>ซื้อเลย</button>
+<p>เพชร 1M+ พร้อมเล่น</p>
+<div class="price">55 บาท</div>
+<button class="buy">ซื้อเลย</button>
+</div>
 </div>
 
 <div class="card">
+<img src="https://picsum.photos/400/250?2">
+<div class="info">
 <h2>ID AOT 900K+</h2>
-<p>45 บาท</p>
-<button>ซื้อเลย</button>
+<p>ตัวละครพร้อมใช้งาน</p>
+<div class="price">45 บาท</div>
+<button class="buy">ซื้อเลย</button>
+</div>
 </div>
 
 <div class="card">
+<img src="https://picsum.photos/400/250?3">
+<div class="info">
 <h2>ID AOT 800K+</h2>
-<p>40 บาท</p>
-<button>ซื้อเลย</button>
+<p>สุ่มของดี</p>
+<div class="price">40 บาท</div>
+<button class="buy">ซื้อเลย</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/400/250?4">
+<div class="info">
+<h2>ID AOT 700K+</h2>
+<p>พร้อมเล่นทันที</p>
+<div class="price">35 บาท</div>
+<button class="buy">ซื้อเลย</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/400/250?5">
+<div class="info">
+<h2>ID AOT 600K+</h2>
+<p>ราคาประหยัด</p>
+<div class="price">30 บาท</div>
+<button class="buy">ซื้อเลย</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/400/250?6">
+<div class="info">
+<h2>ID AOT 500K+</h2>
+<p>เหมาะสำหรับเริ่มต้น</p>
+<div class="price">25 บาท</div>
+<button class="buy">ซื้อเลย</button>
+</div>
 </div>
 
 </div>
+
+</section>
+
+<section id="contact">
+
+<footer>
+<h2>ติดต่อร้าน</h2>
+<br>
+<p>Discord : ใส่ชื่อดิสคอร์ดของคุณ</p>
+<p>TrueMoney Wallet : ใส่เบอร์วอลเลท</p>
+<p>© ZaxZenzeShop</p>
+</footer>
+
+</section>
 
 </body>
 </html>
